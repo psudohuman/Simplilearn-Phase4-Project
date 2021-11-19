@@ -1,0 +1,36 @@
+
+<label id="example-radio-group-label">Question {{counter + 1}}/10</label>
+
+<p>Your final score will be displayed after you answer all the questions</p>
+
+<p>Your Total score is: {{score}}</p>
+
+<mat-radio-group
+  aria-labelledby="example-radio-group-label"
+  class="example-radio-group"
+  [(ngModel)]="selectedAnswer"
+>
+  <strong id="question-statement">{{questions[counter].desc}}</strong>
+  <mat-radio-button class="example-radio-button" [value]="questions[counter].a">
+    {{questions[counter].a}}
+  </mat-radio-button>
+  <mat-radio-button class="example-radio-button" [value]="questions[counter].b">
+    {{questions[counter].b}}
+  </mat-radio-button>
+  <mat-radio-button class="example-radio-button" [value]="questions[counter].c">
+    {{questions[counter].c}}
+  </mat-radio-button>
+  <mat-radio-button class="example-radio-button" [value]="questions[counter].d">
+    {{questions[counter].d}}
+  </mat-radio-button>
+</mat-radio-group>
+
+<button (click)="increaseCounter()">submit</button>
+<br>
+
+<br>
+
+<span *ngIf=showResult>Your selected answer is: {{selectedAnswer}}</span>
+
+
+

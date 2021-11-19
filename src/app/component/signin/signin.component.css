@@ -1,0 +1,16 @@
+.login-form{
+    border: 2px solid green;
+    padding: 20px;
+    background-color: rgb(121, 235, 255);
+}
+.error {
+    color :red;
+    font-weight: bold;
+    font-style: italic;
+}
+.invalid
+{
+    color: red;
+    font-weight: bolder;
+    font-style: italic;
+}
